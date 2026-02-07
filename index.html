@@ -1,213 +1,335 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Alta Visión Propiedades | Venta y Arriendo Exclusivo</title>
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
 
   <style>
+    :root {
+      --primary-color: #0b2c3d;
+      --secondary-color: #f5f7f8;
+    }
+
     body {
       scroll-behavior: smooth;
+      padding-top: 80px; /* compensación navbar fijo */
     }
+
     .navbar {
-      background-color: #0b2c3d;
+      background-color: var(--primary-color);
     }
-    .navbar a {
-      color: #ffffff !important;
+
+    .navbar .nav-link,
+    .navbar-brand {
+      color: #fff !important;
       font-weight: 500;
     }
+
     .hero {
-      background: linear-gradient(rgba(11,44,61,0.7), rgba(11,44,61,0.7)), url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688');
+      background: linear-gradient(
+          rgba(11, 44, 61, 0.75),
+          rgba(11, 44, 61, 0.75)
+        ),
+        url("https://images.unsplash.com/photo-1502672260266-1c1ef2d93688");
       background-size: cover;
       background-position: center;
       color: #fff;
       padding: 120px 20px;
     }
+
     .section {
       padding: 80px 20px;
     }
+
     .section-title {
-      color: #0b2c3d;
+      color: var(--primary-color);
       margin-bottom: 40px;
+      text-align: center;
     }
-    .service-card img {
-      max-height: 200px;
-      object-fit: cover;
+
+    .property-grid img {
       border-radius: 8px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
+
     footer {
-      background-color: #0b2c3d;
-      color: #ffffff;
+      background-color: var(--primary-color);
+      color: #fff;
       padding: 30px 20px;
+      text-align: center;
     }
   </style>
 </head>
+
 <body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#inicio">Alta Visión Propiedades</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container">
-    <a class="navbar-brand text-white" href="#inicio">Alta Visión Propiedades</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
-        <li class="nav-item"><a class="nav-link" href="#casas">Casas</a></li>
-        <li class="nav-item"><a class="nav-link" href="#departamentos">Departamentos</a></li>
-        <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero -->
-<section id="inicio" class="hero text-center">
-  <div class="container">
-    <h1 class="display-5 fw-bold">Propiedades exclusivas para vivir e invertir con confianza</h1>
-    <p class="lead mt-4">Venta y arriendo de casas y departamentos en los sectores más exclusivos del mercado.</p>
-    <a href="#contacto" class="btn btn-light btn-lg mt-3">Solicitar asesoría</a>
-  </div>
-</section>
-
-<!-- Sobre mí -->
-<section id="sobre-mi" class="section bg-light">
-  <div class="container">
-    <h2 class="section-title text-center">Sobre Alta Visión Propiedades</h2>
-    <p class="text-center">Somos una empresa inmobiliaria enfocada en brindar un servicio cercano, profesional y transparente. Acompañamos a nuestros clientes en cada etapa del proceso de compra, venta o arriendo, asegurando decisiones informadas y operaciones exitosas.</p>
-  </div>
-</section>
-
-<!-- Servicios -->
-<section id="mis-servicios" class="section">
-  <div class="container">
-    <h2 class="section-title text-center">Nuestros Servicios</h2>
-
-    <!-- Casas -->
-    <div id="casas" class="mb-5">
-      <h3 class="mb-3">Casas</h3>
-      <p>Asesoría especializada en la venta y arriendo de casas ubicadas en sectores exclusivos, seleccionadas por su calidad, ubicación y plusvalía.</p>
-      <div class="row g-3">
-        <div class="col-md-3">
-          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" class="img-fluid rounded" alt="Casa en sector exclusivo">
-        </div>
-        <div class="col-md-3">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" class="img-fluid rounded" alt="Casa en sector exclusivo">
-        </div>
-        <div class="col-md-3">
-          <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6" class="img-fluid rounded" alt="Casa en sector exclusivo">
-        </div>
-        <div class="col-md-3">
-          <img src="https://images.unsplash.com/photo-1599423300746-b62533397364" class="img-fluid rounded" alt="Casa en sector exclusivo">
-        </div>
-      </div>
-      <a href="#contacto" class="btn btn-primary mt-3">Consultar casas disponibles</a>
-    </div>
-
-    <!-- Departamentos -->
-    <div id="departamentos">
-      <h3 class="mb-3">Departamentos</h3>
-      <p>Gestión integral para la compra, venta y arriendo de departamentos modernos y bien ubicados, ideales para vivir o invertir.</p>
-      <div class="row g-3">
-        <div class="col-md-4">
-          <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" class="img-fluid rounded" alt="Departamento exclusivo 1">
-        </div>
-        <div class="col-md-4">
-          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" class="img-fluid rounded" alt="Departamento exclusivo 2">
-        </div>
-        <div class="col-md-4">
-          <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb" class="img-fluid rounded" alt="Departamento exclusivo 3">
-        </div>
-      </div>
-      <a href="#contacto" class="btn btn-primary mt-3">Consultar departamentos disponibles</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- Testimonios -->
-<section id="testimonios" class="section bg-light">
-  <div class="container">
-    <h2 class="section-title text-center">Testimonios</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <blockquote>“Excelente acompañamiento durante todo el proceso. Profesionalismo y cercanía que generan mucha confianza.”</blockquote>
-        <p><strong>Yenni González</strong></p>
-      </div>
-      <div class="col-md-4">
-        <blockquote>“Muy buena gestión y comunicación clara. Recomiendo totalmente sus servicios inmobiliarios.”</blockquote>
-        <p><strong>Gabito Eterovic</strong></p>
-      </div>
-      <div class="col-md-4">
-        <blockquote>“Una experiencia segura y eficiente. Se nota el conocimiento del mercado y el compromiso.”</blockquote>
-        <p><strong>Pedro Urdemales</strong></p>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#casas">Casas</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#departamentos">Departamentos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonios">Testimonios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- Contacto -->
-<section id="contacto" class="section">
-  <div class="container">
-    <h2 class="section-title text-center">Contacto</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <form method="POST" action="https://formsubmit.co/info.gesmconsult@gmail.com">
-          <input type="hidden" name="_subject" value="Consulta desde Alta Visión Propiedades">
-          <input type="hidden" name="_autoresponse" value="Gracias por contactarnos. Hemos recibido tu consulta y te responderemos a la brevedad.">
-          <input type="hidden" name="_replyto" value="%email%">
+  <!-- HERO -->
+  <section id="inicio" class="hero text-center">
+    <div class="container">
+      <h1 class="fw-bold">
+        Propiedades exclusivas para vivir e invertir con confianza
+      </h1>
+      <p class="lead mt-4">
+        Venta y arriendo de casas y departamentos en los sectores más exclusivos
+        del mercado.
+      </p>
+      <a href="#contacto" class="btn btn-light btn-lg mt-3"
+        >Solicitar asesoría</a
+      >
+    </div>
+  </section>
 
-          <div class="mb-3">
-            <label class="form-label">Nombre</label>
-            <input type="text" name="name" class="form-control" required>
+  <!-- SOBRE MI -->
+  <section id="sobre-mi" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Sobre Alta Visión Propiedades</h2>
+      <p class="text-center">
+        Somos una empresa inmobiliaria enfocada en brindar un servicio cercano,
+        profesional y transparente. Acompañamos a nuestros clientes en cada
+        etapa del proceso de compra, venta o arriendo, asegurando decisiones
+        informadas y operaciones exitosas.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="mis-servicios" class="section">
+    <div class="container">
+      <h2 class="section-title">Nuestros Servicios</h2>
+
+      <!-- CASAS -->
+      <div id="casas" class="mb-5 pt-5">
+        <h3>Casas</h3>
+        <p>
+          Asesoría especializada en la venta y arriendo de casas ubicadas en
+          sectores exclusivos, seleccionadas por su calidad, ubicación y
+          plusvalía.
+        </p>
+
+        <div class="row g-3 property-grid">
+          <div class="col-6 col-md-3">
+            <img
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+              alt="Casa en sector exclusivo"
+            />
           </div>
-          <div class="mb-3">
-            <label class="form-label">Email</label>
-            <input type="email" name="email" class="form-control" required>
+          <div class="col-6 col-md-3">
+            <img
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+              alt="Casa en sector exclusivo"
+            />
           </div>
-          <div class="mb-3">
-            <label class="form-label">Mensaje</label>
-            <textarea name="message" class="form-control" rows="4" required></textarea>
+          <div class="col-6 col-md-3">
+            <img
+              src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6"
+              alt="Casa en sector exclusivo"
+            />
           </div>
-          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-        </form>
+          <div class="col-6 col-md-3">
+            <img
+              src="https://images.unsplash.com/photo-1599423300746-b62533397364"
+              alt="Casa en sector exclusivo"
+            />
+          </div>
+        </div>
+
+        <a href="#contacto" class="btn btn-primary mt-3"
+          >Consultar casas disponibles</a
+        >
       </div>
-      <div class="col-md-6">
-        <p><strong>Email:</strong> info.gesmconsult@gmail.com</p>
-        <p><strong>WhatsApp:</strong> +56 9 71375871</p>
-        <a href="https://wa.me/56971375871" class="btn btn-success">Escribir por WhatsApp</a>
+
+      <!-- DEPARTAMENTOS -->
+      <div id="departamentos" class="pt-5">
+        <h3>Departamentos</h3>
+        <p>
+          Gestión integral para la compra, venta y arriendo de departamentos
+          modernos y bien ubicados, ideales para vivir o invertir.
+        </p>
+
+        <div class="row g-3 property-grid">
+          <div class="col-6 col-md-4">
+            <img
+              src="https://images.unsplash.com/photo-1505691938895-1758d7feb511"
+              alt="Departamento moderno"
+            />
+          </div>
+          <div class="col-6 col-md-4">
+            <img
+              src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+              alt="Departamento moderno"
+            />
+          </div>
+          <div class="col-6 col-md-4">
+            <img
+              src="https://images.unsplash.com/photo-1493809842364-78817add7ffb"
+              alt="Departamento moderno"
+            />
+          </div>
+        </div>
+
+        <a href="#contacto" class="btn btn-primary mt-3"
+          >Consultar departamentos disponibles</a
+        >
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer class="text-center">
-  <p>© 2026 Alta Visión Propiedades. Todos los derechos reservados.</p>
-</footer>
+  <!-- TESTIMONIOS -->
+  <section id="testimonios" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Testimonios</h2>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <p>
+            “Excelente acompañamiento durante todo el proceso. Profesionalismo y
+            cercanía que generan mucha confianza.”
+          </p>
+          <strong>Yenni González</strong>
+        </div>
+        <div class="col-md-4">
+          <p>
+            “Muy buena gestión y comunicación clara. Recomiendo totalmente sus
+            servicios inmobiliarios.”
+          </p>
+          <strong>Gabito Eterovic</strong>
+        </div>
+        <div class="col-md-4">
+          <p>
+            “Una experiencia segura y eficiente. Se nota el conocimiento del
+            mercado y el compromiso.”
+          </p>
+          <strong>Pedro Urdemales</strong>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  const navLinks = document.querySelectorAll('.nav-link');
-  const menu = document.getElementById('menu');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth < 992) {
-        new bootstrap.Collapse(menu).hide();
-      }
+  <!-- CONTACTO -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <h2 class="section-title">Contacto</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <form
+            method="POST"
+            action="https://formsubmit.co/info.gesmconsult@gmail.com"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="Consulta desde Alta Visión Propiedades"
+            />
+            <input
+              type="hidden"
+              name="_autoresponse"
+              value="Gracias por contactarnos. Hemos recibido tu consulta y te responderemos a la brevedad."
+            />
+            <input type="hidden" name="_replyto" value="%email%" />
+
+            <div class="mb-3">
+              <label class="form-label">Nombre</label>
+              <input type="text" name="name" class="form-control" required />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" name="email" class="form-control" required />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Mensaje</label>
+              <textarea
+                name="message"
+                class="form-control"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Enviar mensaje
+            </button>
+          </form>
+        </div>
+
+        <div class="col-md-6">
+          <p><strong>Email:</strong> info.gesmconsult@gmail.com</p>
+          <p><strong>WhatsApp:</strong> +56 9 71375871</p>
+          <a
+            href="https://wa.me/56971375871"
+            class="btn btn-success"
+            target="_blank"
+            >Escribir por WhatsApp</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Alta Visión Propiedades. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Cierre automático menú mobile -->
+  <script>
+    const navLinks = document.querySelectorAll(".nav-link");
+    const menu = document.getElementById("menu");
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth < 992) {
+          new bootstrap.Collapse(menu).hide();
+        }
+      });
     });
-  });
-</script>
-
+  </script>
 </body>
 </html>
+
 
 
 
